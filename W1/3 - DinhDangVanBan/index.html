@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Định dạng văn bản</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 40px;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="color: limegreen; text-align: center;">Định dạng văn bản</h1>
+
+      <div style="display: flex; flex-flow: column nowrap;">
+      <p>
+        <span class="bold underline">Hóa học:</span>
+        <span class="italic">Nước:</span>
+        <span class="red">H<sub>2</sub>O</span>;
+        <span class="italic">Axit Sunfuric:</span>
+        <span class="red">H<sub>2</sub>SO<sub>4</sub></span>
+      </p>
+
+      <p>
+        <span class="bold underline">Toán học:</span>
+        <span class="italic">Phương trình bậc 2:</span>
+        <span class="red">ax<sup>2</sup> + bx + c = 0</span>
+      </p>
+
+      <p>
+        <span class="bold underline">Tin học:</span>
+        <span class="italic">Vòng lặp for:</span>
+      </p>
+    </div>
+    <pre style="background-color: #ccc; color: blue; padding: 16px 256px 0 32px;">
+      int tong = 0;
+
+      for(int i = 1; i <= 10; i++)
+
+          tong += i; 
+
+      printf("Tong cac so tu 1 => 10 la: %d\n",tong);
+    </pre>
+  </div>
+</body>
+</html>

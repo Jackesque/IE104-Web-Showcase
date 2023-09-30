@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here</title>
   <style>
-    /* @import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400'); */
+    @import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
     html {
       height: 100%;
     }
@@ -100,10 +100,10 @@
   var currenHour = new Date().getHours();
   if (document.body) {
       if (currenHour < 12) {
-          document.body.style = "background-image: url('/images/madman1.png');";
+          document.body.style = "background-image: url('./images/madman1.png');";
       }
       else {
-        document.body.style = "background-image: url('/images/madman2.png');";
+        document.body.style = "background-image: url('./images/madman2.png');";
         document.getElementsByTagName("h1")[0].style = "background: rgba(255, 255, 255, 0.2); border-radius: 0.125rem;";
         const table = document.getElementsByTagName("table")[0];
         table.style = "border-spacing: 6px; border-collapse: separate;";

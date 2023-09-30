@@ -6,7 +6,7 @@
   <title>Start Here</title>
   <style>
     @font-face {
-      font-family: 'FiraGO';
+      font-family: FiraGO;
       font-style: normal;
       font-weight: 400;
       src: url(./fonts/FiraGO/fonts.woff) format('woff');
@@ -35,25 +35,23 @@
     td {
       padding-inline-start: 1em;
     }
-    
     ol > span {
       display: list-item;
       padding: 0.5rem;
       margin: 0.5rem;
     }
-    
     ol a {
       background: lightblue;
       display: inline;
       padding: 0.5rem;
       border-radius: 0.375rem;
     }
-    
     ol a:hover {
       background: lightpink;
     }
   </style>
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="flex flex-col items-center">
@@ -105,10 +103,10 @@
   var currentHour = new Date().getHours();
   if (document.body) {
     if (currentHour < 12) {
-      document.body.style = "background-image: url('./images/madman1.png');";
+      document.body.style = "background-image: url(./images/backgrounds/madman1.png);";
     }
     else {
-      document.body.style = "background-image: url('./images/madman2.png');";
+      document.body.style = "background-image: url(./images/backgrounds/madman2.png);";
       document.getElementsByTagName("h1")[0].style = "background: rgba(255, 255, 255, 0.2); border-radius: 0.125rem;";
       const table = document.getElementsByTagName("table")[0];
       table.style = "border-spacing: 6px; border-collapse: separate;";

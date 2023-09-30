@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here</title>
   <style>
-    @import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+    @font-face {
+      font-family: 'FiraGO';
+      font-style: normal;
+      font-weight: 400;
+      src: url(./fonts/FiraGO/fonts.woff) format('woff');
+    }
     html {
       height: 100%;
     }
@@ -14,11 +19,11 @@
       font-family: monospace;
       background: center / cover no-repeat;
       user-select: none;
-
+      
     }
-
+    
     table {
-      font-family: 'FiraGO', Arial, Helvetica, sans-serif;
+      font-family: FiraGO, Arial, Helvetica, sans-serif;
     }
     tr, th {
       border: 1px solid black;
@@ -30,7 +35,7 @@
     td {
       padding-inline-start: 1em;
     }
-
+    
     ol > span {
       display: list-item;
       padding: 0.5rem;
@@ -43,12 +48,12 @@
       padding: 0.5rem;
       border-radius: 0.375rem;
     }
-
+    
     ol a:hover {
       background: lightpink;
     }
   </style>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
   <div class="flex flex-col items-center">
@@ -57,38 +62,38 @@
       <div class="rounded-md">
         <table class="rounded-lg">
           <caption class="my-4 text-lg rounded-sm" style="background: rgba(255, 255, 255, 0.2);">Choose A Place To Go</caption>
-            <tr>
-              <th>Week 1</th>
-              <td>
-                <ol class="list-decimal ms-6">
-                  <span><a href="./W1/1 - Me/index.html">Mẹ</a></span>
-                  <span><a href="./W1/2 - PhuQuoc/index.html">Phú Quốc</a></span>
-                  <span><a href="./W1/3 - DinhDangVanBan/index.html">Định Dạng Văn Bản</a></span>
-                  <span><a href="./W1/4 - TruyenNguNgon/index.html">Truyện Ngụ Ngôn</a></span>
-                  <span><a href="./W1/5 - ShopHoaTuoi/index.html">Shop Hoa Tươi</a></span>
-                </ol>
-              </td>
-            </tr>
-            <tr>
-              <th>Week 2</th>
-              <td>
-              </td>
-            </tr>
-            <tr>
-              <th>Week 3</th>
-              <td>
-              </td>
-            </tr>
-            <tr>
-              <th>Week 4</th>
-              <td>
-              </td>
-            </tr>
-            <tr>
-              <th>Week 5</th>
-              <td>
-              </td>
-            </tr>
+          <tr>
+            <th>Week 1</th>
+            <td>
+              <ol class="list-decimal ms-6">
+                <span><a href="./W1/1 - Me/index.html">Mẹ</a></span>
+                <span><a href="./W1/2 - PhuQuoc/index.html">Phú Quốc</a></span>
+                <span><a href="./W1/3 - DinhDangVanBan/index.html">Định Dạng Văn Bản</a></span>
+                <span><a href="./W1/4 - TruyenNguNgon/index.html">Truyện Ngụ Ngôn</a></span>
+                <span><a href="./W1/5 - ShopHoaTuoi/index.html">Shop Hoa Tươi</a></span>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <th>Week 2</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Week 3</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Week 4</th>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Week 5</th>
+            <td>
+            </td>
+          </tr>
         </table>
       </div>
       <div></div>  
@@ -99,22 +104,22 @@
 <script type="text/javascript">
   var currentHour = new Date().getHours();
   if (document.body) {
-      if (currentHour < 12) {
-          document.body.style = "background-image: url('./images/madman1.png');";
+    if (currentHour < 12) {
+      document.body.style = "background-image: url('./images/madman1.png');";
+    }
+    else {
+      document.body.style = "background-image: url('./images/madman2.png');";
+      document.getElementsByTagName("h1")[0].style = "background: rgba(255, 255, 255, 0.2); border-radius: 0.125rem;";
+      const table = document.getElementsByTagName("table")[0];
+      table.style = "border-spacing: 6px; border-collapse: separate;";
+      const allElementsInTable = table.querySelectorAll("caption, tr, th, td");
+      for (const ele of allElementsInTable) {
+        ele.style.background = "rgba(255, 255, 255, 0.2)";
+        ele.style.border = 0;
+        ele.style.borderRadius = "0.125rem";
       }
-      else {
-        document.body.style = "background-image: url('./images/madman2.png');";
-        document.getElementsByTagName("h1")[0].style = "background: rgba(255, 255, 255, 0.2); border-radius: 0.125rem;";
-        const table = document.getElementsByTagName("table")[0];
-        table.style = "border-spacing: 6px; border-collapse: separate;";
-        const allElementsInTable = table.querySelectorAll("caption, tr, th, td");
-        for (const ele of allElementsInTable) {
-          ele.style.background = "rgba(255, 255, 255, 0.2)";
-          ele.style.border = 0;
-          ele.style.borderRadius = "0.125rem";
-        }
-        table.querySelectorAll("caption")[0].style.margin = "0.375rem";
-      }
+      table.querySelectorAll("caption")[0].style.margin = "0.375rem";
+    }
   }
-  </script>
+</script>
 </html>

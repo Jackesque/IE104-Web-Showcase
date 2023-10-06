@@ -54,5 +54,5 @@ tr > td:nth-child(1)::before {
 }
 tr > td:nth-child(2) {
   text-align: start;
-  padding-inline-start: 0.25em;
+  padding-inline-start: 0.25rem;
 }

@@ -4,7 +4,7 @@ html {
 body {
   display: flex;
   justify-content: center;
-  background: url(./images/rose.png) 6em 29em / auto no-repeat, url(./images/kim-tea-hee.png) left / auto no-repeat, darkred url(./images/nen-hoa-hong.png) right bottom / auto no-repeat;
+  background: url(./images/rose.png) 6rem 29rem / auto fixed no-repeat, url(./images/kim-tea-hee.png) left / auto fixed no-repeat, darkred url(./images/nen-hoa-hong.png) right bottom / auto fixed no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 h1, h2 {
@@ -14,14 +14,9 @@ p {
   line-height: 2;
   margin-block-start: 0;
 }
-li > ul, li > ol {
-  padding-inline-start: 1.25em;
-}
+
 .text-red {
   color: red;
-}
-.text-pink {
-  color: #feccff;
 }
 .bold {
   font-weight: bold;
@@ -35,9 +30,17 @@ li > ul, li > ol {
 .flex-col {
   flex-direction: column;
 }
+.flex-auto {
+  flex: 1 1 auto;
+}
 .p-2 {
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 .pis-6 {
-  padding-inline-start: 2.5em;
+  padding-inline-start: 2.5rem;
+}
+
+li > ul, li > ol {
+  padding-inline-start: 1.25rem;
+  color: #feccff;
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phiếu đăng ký khuyến mãi</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
+    <form action="post">
+      <tr>
+        <td><label for="username">Họ tên</label></td>
+        <td><input type="text" required></td>
+      </tr>
+      <tr>
+        <td><label for="form_address">Địa chỉ</label></td>
+        <td><textarea name="address" id="form_address" cols="30" rows="4"></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="form_phone">Điện thoại</label></td>
+        <td><input type="tel" name="phone" id="form_phone" pattern="^(\d{10}|\d{11})$" title="Số điện thoại phải bao gồm 10 hoặc 11 chữ số"></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Giới tính</label></td>
+        <td>
+          <input type="radio" name="gender" id="form_gender_nam" value="nam" required>
+          <label for="form_gender_nam">Nam</label>
+          <input type="radio" name="gender" id="form_gender_nu" value="nu" required>
+          <label for="form_gender_nu">Nữ</label>
+          
+        </td>
+      </tr>
+      <tr>
+        <td><label for="career">Nghề nghiệp</label></td>
+        <td><select name="career" id="form_career">
+          <option value="gv">Giáo viên</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><label for="selected-product">Chọn sản phẩm tham gia</label></td>
+        <td><select name="product" id="form_product" size="4">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><label for="participants-guess-number">Số người dự đoán tham gia</label></td>
+        <td><input type="number"></td>
+      </tr>
+      <tr>
+        <td><button type="submit">Đồng ý</button></td>
+      </tr>
+      <tr>
+        <td>Bạn đã đăng ký thành công!!!</td>
+      </tr>
+    </form>
+  </table>
+</body>
+</html>

@@ -59,6 +59,10 @@
   <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <audio autoplay="autoplay" loop controls style="display: none;" id="page_audio">
+    <source src="./audio/Gabriel Dropout ED Full Hallelujah Essaim.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
   <div class="flex flex-col items-center">
     <h1 class="text-5xl/normal font-bold p-1 m-2 rounded-sm" style="background: rgba(255, 255, 255, 0.2);">Start Here</h1>
     <div class="flex justify-evenly min-w-full">
@@ -119,7 +123,13 @@
 </body>
 
 <script type="text/javascript">
-  var currentHour = new Date().getHours();
+
+  // Adjust volume for page audio
+  let pageAudio = document.getElementById("page_audio");
+  pageAudio.volume = 0.1;
+
+  // Change theme based on current hour in a day
+  let currentHour = new Date().getHours();
   if (document.body) {
     if (currentHour < 12) {
       document.body.style = "background-image: url(./images/backgrounds/madman1.png);";

@@ -125,11 +125,11 @@
 <script type="text/javascript">
 
   // Adjust volume for page audio
-  let pageAudio = document.getElementById("page_audio");
+  const pageAudio = document.getElementById("page_audio");
   pageAudio.volume = 0.1;
 
   // Change theme based on current hour in a day
-  let currentHour = new Date().getHours();
+  const currentHour = new Date().getHours();
   if (document.body) {
     if (currentHour < 12) {
       document.body.style = "background-image: url(./images/backgrounds/madman1.png);";

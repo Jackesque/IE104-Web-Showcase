@@ -124,9 +124,7 @@
 
 <script type="text/javascript">
   
-  // Adjust volume for page audio
-  const pageAudio = document.getElementById("page_audio");
-  pageAudio.volume = 0.1;
+  // Add event listeners for keydown events
   document.addEventListener('keydown', (event) => {
     switch (event.key) {
       case 'm':
@@ -145,6 +143,11 @@
         break;
     }
   });
+  // Adjust volume for page audio
+  const pageAudio = document.getElementById("page_audio");
+  pageAudio.volume = 0.1;
+
+  // Then play
   pageAudio.play();
   
   // Change theme based on current hour in a day

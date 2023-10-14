@@ -10,6 +10,10 @@
       justify-content: center;
       align-items: center;
     }
+    table {
+      border: 1px solid blue;
+      border-collapse: collapse;
+    }
 
     .flex {
       display: flex;
@@ -19,7 +23,7 @@
 <body>
   <table>
     <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
-    <form action="post">
+    <form action="#" method="post">
       <tr>
         <td><label for="username">Họ tên</label></td>
         <td><input type="text" required></td>
@@ -37,37 +41,37 @@
         <td>
           <input type="radio" name="gender" id="form_gender_nam" value="nam" required>
           <label for="form_gender_nam">Nam</label>
-          <input type="radio" name="gender" id="form_gender_nu" value="nu" required>
+          <input type="radio" name="gender" id="form_gender_nu" value="nu" required checked>
           <label for="form_gender_nu">Nữ</label>
-          
         </td>
       </tr>
       <tr>
-        <td><label for="career">Nghề nghiệp</label></td>
+        <td><label for="form_career">Nghề nghiệp</label></td>
         <td><select name="career" id="form_career">
-          <option value="gv">Giáo viên</option>
-          <option value=""></option>
-          <option value=""></option>
+          <option value="doctor">Bác sĩ</option>
+          <option value="engineer">Kỹ sư</option>
+          <option value="teacher" selected>Giáo viên</option>
+          <option value="others">Khác</option>
         </select></td>
       </tr>
       <tr>
-        <td><label for="selected-product">Chọn sản phẩm tham gia</label></td>
-        <td><select name="product" id="form_product" size="4">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <td><label for="form_product">Chọn sản phẩm tham gia</label></td>
+        <td><select name="product" id="form_product" size="4" multiple>
+          <option value="toothpaste">Kem đánh răng</option>
+          <option value="washing_powder" selected>Bột giặt</option>
+          <option value="shampoo">Dầu gội đầu</option>
+          <option value="shower_gel" selected>Sữa tắm</option>
         </select></td>
       </tr>
       <tr>
-        <td><label for="participants-guess-number">Số người dự đoán tham gia</label></td>
-        <td><input type="number"></td>
+        <td><label for="form_participants_guess_number">Số người dự đoán tham gia</label></td>
+        <td><input type="number" placeholder="30000"></td>
       </tr>
       <tr>
-        <td><button type="submit">Đồng ý</button></td>
+        <td colspan="2"><button type="submit">Đồng ý</button></td>
       </tr>
       <tr>
-        <td>Bạn đã đăng ký thành công!!!</td>
+        <td colspan="2">Bạn đã đăng ký thành công!!!</td>
       </tr>
     </form>
   </table>

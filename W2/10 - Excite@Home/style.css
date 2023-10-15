@@ -14,6 +14,9 @@ body {
 p {
   margin: 0;
 }
+span {
+  cursor: pointer;
+}
 
 .flex {
   display: flex;

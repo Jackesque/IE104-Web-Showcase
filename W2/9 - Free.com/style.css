@@ -59,3 +59,10 @@ footer {
 .py-4 {
   padding-block: 1rem;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}

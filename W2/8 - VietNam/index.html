@@ -8,25 +8,23 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+  <!-- audio -->
   <audio loop controls style="display: none;" id="page_audio">
     <source src="./audio/HelloVietNam-QuynhAnh.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <!-- dùng map thay cho a -->
-  <!-- https://www.w3schools.com/tags/tag_area.asp 
-    area rect poly circle
-  -->
   
   <!-- title -->
   <h1 style="color: red; text-align: center;">Việt Nam - Đất nước - Con người</h1>
   
   <!-- map -->
-  <div style="position: relative;">
-    <a href="./HaNoi.html" style="position: absolute; left: 6.5rem; top: 3.5rem; padding: 1rem 1.5rem;"></a>
-    <a href="./Hue.html" style="position: absolute; left: 10.5rem; top: 11.75rem; padding: 1rem;"></a>
-    <a href="./TpHCM.html" style="position: absolute; left: 10rem; top: 25rem; padding: 1rem;"></a>
-    <img src="./images/ban-do-viet-nam.png" alt="ban-do-viet-nam" style="float: left; max-width: 15rem; margin: 0 2rem;">
-  </div>
+  <img src="./images/ban-do-viet-nam.png" alt="ban-do-viet-nam" style="float: left; max-width: 15rem; margin: 0 2rem;" usemap="#ban-do-viet-nam">
+  <map name="ban-do-viet-nam">
+    <area shape="rect" coords="81,62,112,78" alt="HaNoi" href="./HaNoi.html">
+    <area shape="poly" coords="153,195,145,210,160,210" alt="Hue" href="./Hue.html">
+    <area shape="circle" coords="147,415,7" alt="TpHCM" href="./TpHCM.html">
+  </map>
   
   <!-- links -->
   <ul>
@@ -49,11 +47,13 @@
   <p>Việt Nam có khí hậu nhiệt đới xavan ở miền Nam với hai mùa (mùa mưa, từ giữa tháng 5 đến giữa tháng 9, và mùa khô, từ giữa tháng 10 đến giữa tháng 4) và khí hậu cận nhiệt đới ẩm ở miền Bắc với bốn mùa rõ rệt (mùa xuân, mùa hè, mùa thu và mùa đông), còn miền trung có đặc điểm của khí hậu nhiệt đới gió mùa. Do nằm dọc theo bờ biển, khí hậu Việt Nam được điều hòa một phần bởi các dòng biển và mang nhiều yếu tố khí hậu biển. Độ ẩm tương đối trung bình là 84% suốt năm. Hằng năm, lượng mưa từ 1.200 đến 3.000 mm,số giờ nắng khoảng 1.500 đến 3.000 giờ/năm và nhiệt độ từ 5 °C đến 37 °C. Hàng năm, Việt Nam luôn phải phòng chống bão và lụt lội với 5 đến 10 cơn bão/năm.</p>
   <p>Về tài nguyên đất, Việt Nam có rừng tự nhiên và nhiều mỏ khoáng sản trên đất liền với phốt phát, than đá, măng gan, bô xít, chrômát,... Về tài nguyên biển có dầu mỏ, khí tự nhiên, quặng khoáng sản ngoài khơi. Với hệ thống sông dốc đổ từ các cao nguyên phía tây, Việt Nam có nhiều tiềm năng về phát triển thủy điện.</p>
   
-  <iframe src="./footer.html" loading="lazy" onload="this.before(this.contentDocument.body||this.contentDocument); this.remove();"></iframe>
+  <!-- footer -->
+  <iframe src="./footer.html" loading="lazy" onload="loadHandler('page_footer_1')" id="page_footer_1"></iframe>
   <footer>
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});">&#8613;</button>
   </footer>
-
+  
+  <!-- other pages -->
   <iframe src="./HaNoi.html" loading="lazy" onload="loadHandler('HaNoi')" id="HaNoi"></iframe>
   <iframe src="./Hue.html" loading="lazy" onload="loadHandler('Hue')" id="Hue"></iframe>
   <iframe src="./TpHCM.html" loading="lazy" onload="loadHandler('TpHCM')" id="TpHCM"></iframe>
@@ -62,11 +62,10 @@
   const pageAudio = document.getElementById("page_audio");
   pageAudio.volume = 0.1;
   pageAudio.play();
-
-  function loadHandler(id){
+  
+  const loadHandler = (id) => {
     const ele = document.getElementById(id);
-    ele.contentDocument.body.style.background='none';
-    ele.before((ele.contentDocument.body||ele.contentDocument));
+    ele.before((ele.contentDocument.body.children[0] || ele.contentDocument));
     ele.remove();
   }
 </script>

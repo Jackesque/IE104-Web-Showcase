@@ -2,17 +2,16 @@
     const pageAudio = document.getElementById("page_audio");
     pageAudio.volume = 0.1;
     
-    // Add event listeners for keydown events
-    document.addEventListener('click', (event)=> {
-      pageAudio.play();
-    })
+    // Listen for keyboard events
     document.addEventListener('keydown', (event) => {
-      switch (event.key) {
+      const key = event.key;
+      switch (key) {
         case 'm':
         pageAudio.muted = !pageAudio.muted;
         break;
         case ' ':
         case 'Spacebar':
+        case 'p':
         event.preventDefault(); // Prevent the spacebar from scrolling the page
         if (pageAudio.paused) {
           pageAudio.play();
@@ -21,13 +20,23 @@
         }
         break;
         default:
-        break;
-      }
+          if (/^\d$/.test(key)) {
+            // Convert the key to a number and set the audio volume accordingly
+            // 1-9 maps to 10%-90% and 0 maps to 100%
+            const numKey = parseInt(key);
+            pageAudio.muted = false;
+            let volume = numKey / 10;
+            if (numKey === 0) volume = 1;
+            pageAudio.volume = volume;
+            break;
+          }
+          break;
+        }
     });
     
     // Then play
-    pageAudio.play();
-    
+    pageAudio.muted = !pageAudio.muted;
+
     // Change theme based on current hour in a day
     const currentHour = new Date().getHours();
     if (document.body) {

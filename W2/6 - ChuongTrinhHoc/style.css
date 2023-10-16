@@ -10,7 +10,6 @@ body {
   justify-content: center; align-items: center;
   background: url(./images/truong_day_thiet_ke_do_hoa.jpg) 13.5rem bottom / auto fixed no-repeat, url(./images/nguyen-tac-trong-thiet-ke-do-hoa.jpg) -3.25rem top fixed repeat-x;
 }
-
 table {
   border: 4px solid lime;
   text-align: center;

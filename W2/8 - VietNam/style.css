@@ -1,3 +1,6 @@
+ul {
+  display: inline-block;
+}
 ul > a {
   display: list-item;
 }

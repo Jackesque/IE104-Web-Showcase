@@ -3,6 +3,7 @@
     pageAudio.volume = 0.1;
     
     // Listen for keyboard events
+    document.addEventListener('click', () => pageAudio.play());
     document.addEventListener('keydown', (event) => {
       const key = event.key;
       switch (key) {

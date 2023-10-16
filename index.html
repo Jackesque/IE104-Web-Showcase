@@ -4,62 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here</title>
-  <style>
-    @font-face {
-      font-family: FiraGO;
-      font-style: normal;
-      font-weight: 400;
-      src: url(./fonts/FiraGO/fonts.woff) format('woff');
-    }
-    html {
-      height: 100%;
-    }
-    body {
-      height: 100%;
-      font-family: monospace;
-      background: center / cover fixed no-repeat;
-      user-select: none;
-    }
-    
-    table {
-      font-family: FiraGO, Arial, Helvetica, sans-serif;
-      counter-reset: list-item-counter;
-    }
-    th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th {
-      padding-inline: 0.5rem;
-    }
-    ol > span {
-      display: list-item;
-      padding: 0.5rem;
-      margin: 0.5rem;
-    }
-    ol > span::before {
-      counter-increment: list-item-counter;
-      content: counter(list-item-counter);
-      display: inline-block;
-      text-align: center;
-      width: 2em;
-      font-size: 1rem;
-    }
-    ol a {
-      background: lightblue;
-      display: inline;
-      padding: 0.5rem;
-      border-radius: 0.375rem;
-    }
-    ol a:hover {
-      background: lightpink;
-    }
-  </style>
+  <script defer src="./index.js"></script>
+  <link rel="stylesheet" href="./style.css">
   <link href="./dist/output.css" rel="stylesheet">
   <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <audio loop controls style="display: none;" id="page_audio">
+  <audio controls loop autoplay style="position: absolute; top: -1000rem;" id="page_audio">
     <source src="./audio/Gabriel Dropout ED Full Hallelujah Essaim.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -121,65 +72,4 @@
     </div>
   </div>
 </body>
-
-<script type="text/javascript">
-
-    // Adjust volume for page audio
-  const pageAudio = document.getElementById("page_audio");
-  pageAudio.volume = 0.1;
-  
-  // Add event listeners for keydown events
-  document.addEventListener('click', (event)=> {
-    pageAudio.play();
-  })
-  document.addEventListener('keydown', (event) => {
-    switch (event.key) {
-      case 'm':
-        pageAudio.muted = !pageAudio.muted;
-        break;
-      case ' ':
-      case 'Spacebar':
-        event.preventDefault(); // Prevent the spacebar from scrolling the page
-        if (pageAudio.paused) {
-          pageAudio.play();
-        } else {
-          pageAudio.pause();
-        }
-        break;
-      default:
-        break;
-    }
-  });
-
-  // Then play
-  pageAudio.play();
-  
-  // Change theme based on current hour in a day
-  const currentHour = new Date().getHours();
-  if (document.body) {
-    if (currentHour < 12) {
-      document.body.style = "background-image: url(./images/backgrounds/madman1.png);";
-    }
-    else {
-      const bodyEle = document.body;
-      bodyEle.style = "background-image: url(./images/backgrounds/madman2.png);";
-      
-      const h1Ele = bodyEle.getElementsByTagName("h1")[0];
-      h1Ele.style = "background: rgba(255, 255, 255, 0.2); border-radius: 0.125rem;";
-      
-      const tableEle = document.getElementsByTagName("table")[0];
-      tableEle.style = "border-spacing: 6px; border-collapse: separate;";
-      
-      const captionEle = tableEle.querySelectorAll("caption")[0];
-      captionEle.style.margin = "0.375rem";
-      
-      const allElementsInTable = tableEle.querySelectorAll("caption, th, td");
-      for (const ele of allElementsInTable) {
-        ele.style.background = "rgba(255, 255, 255, 0.2)";
-        ele.style.border = 0;
-        ele.style.borderRadius = "0.125rem";
-      }
-    }
-  }
-</script>
 </html>

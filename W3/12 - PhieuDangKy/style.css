@@ -62,7 +62,7 @@
   tr:last-of-type > td:first-of-type::after, tr:nth-last-of-type(2) > td:first-of-type::after {
     content: "";
   }
-  tr:nth-of-type(4) > td:last-of-type > *, select, button {
+  input[type='radio'], input[type='radio'] + label, select, button {
     cursor: pointer;
   }
   button {

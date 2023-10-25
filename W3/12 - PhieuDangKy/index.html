@@ -7,33 +7,33 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <table>
-    <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
-    <form action="#" method="post">
+  <form action="#" method="post">
+    <table>
+      <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
       <tr>
-        <td><label for="form_username">Họ tên</label></td>
-        <td><input type="text" name="username" id="form_username" autocomplete="on" required></td>
+        <td><label for="username">Họ tên</label></td>
+        <td><input type="text" id="username" name="username" autocomplete="on" required></td>
       </tr>
       <tr>
-        <td><label for="form_address">Địa chỉ</label></td>
-        <td><textarea name="address" id="form_address" cols="40" rows="4" autocomplete="on" required></textarea></td>
+        <td><label for="address">Địa chỉ</label></td>
+        <td><textarea id="address" name="address" cols="40" rows="4" autocomplete="on" required></textarea></td>
       </tr>
       <tr>
-        <td><label for="form_phone">Điện thoại</label></td>
-        <td><input type="tel" name="phone" id="form_phone" pattern="^(\d{10}|\d{11})$" title="Số điện thoại phải bao gồm 10 hoặc 11 chữ số" autocomplete="on" required></td>
+        <td><label for="phone">Điện thoại</label></td>
+        <td><input type="tel" id="phone" name="phone" pattern="^(\d{10}|\d{11})$" title="Số điện thoại phải bao gồm 10 hoặc 11 chữ số" autocomplete="on" required></td>
       </tr>
       <tr>
         <td>Giới tính</td>
         <td>
-          <input type="radio" name="gender" id="form_gender_nam" value="nam" required>
-          <label for="form_gender_nam">Nam</label>
-          <input type="radio" name="gender" id="form_gender_nu" value="nu" required checked>
-          <label for="form_gender_nu">Nữ</label>
+          <input type="radio" id="gender_nam" name="gender" value="nam" required>
+          <label for="gender_nam">Nam</label>
+          <input type="radio" id="gender_nu" name="gender" value="nu" required checked>
+          <label for="gender_nu">Nữ</label>
         </td>
       </tr>
       <tr>
-        <td><label for="form_career">Nghề nghiệp</label></td>
-        <td><select name="career" id="form_career">
+        <td><label for="career">Nghề nghiệp</label></td>
+        <td><select id="career" name="career" required>
           <option value="doctor">Bác sĩ</option>
           <option value="engineer">Kỹ sư</option>
           <option value="teacher" selected>Giáo viên</option>
@@ -41,8 +41,8 @@
         </select></td>
       </tr>
       <tr>
-        <td><label for="form_product">Chọn sản phẩm tham gia</label></td>
-        <td><select name="product" id="form_product" size="4" multiple>
+        <td><label for="product">Chọn sản phẩm tham gia</label></td>
+        <td><select id="product" name="product" size="4" multiple required>
           <option value="toothpaste">Kem đánh răng</option>
           <option value="washing_powder" selected>Bột giặt</option>
           <option value="shampoo">Dầu gội đầu</option>
@@ -50,8 +50,8 @@
         </select></td>
       </tr>
       <tr>
-        <td><label for="form_participants_guess_number">Số người dự đoán tham gia</label></td>
-        <td><input type="number" id="form_participants_guess_number" placeholder="30000"></td>
+        <td><label for="participants_guess_number">Số người dự đoán tham gia</label></td>
+        <td><input type="number" id="participants_guess_number" name="participants_guess_number" placeholder="30000" min="0" step="1" required></td>
       </tr>
       <tr>
         <td colspan="2"><button type="submit">Đồng ý</button></td>

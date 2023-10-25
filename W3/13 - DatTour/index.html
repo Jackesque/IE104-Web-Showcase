@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phiếu đăng ký khuyến mãi</title>
+  <title>Đăng ký du lịch</title>
   <style>
     body {
       padding: 0;
@@ -15,31 +15,27 @@
       color: blue;
     }
     table {
-      border-spacing: 1rem;
       border-collapse: collapse;
-      background: rgba(0, 255, 255, 0.2) url(./images/khuyen-mai.png) center bottom / contain no-repeat;
+      background-color: lightgoldenrodyellow;
+    }
+    td {
+      padding: 0.5rem;
+      border: 2px solid blue;
     }
     caption {
-      color: white;
-      margin-inline: -8rem;
+      text-transform: uppercase;
     }
     tr > td:first-of-type {
-      text-align: end;
-    }
-    tr > td:first-of-type::after {
-      content: ":";
-    }
-    tr > td:last-of-type {
-      padding-inline-end: 4rem;
+      padding-inline-end: 6rem;
     }
     tr:first-of-type > td:last-of-type > * {
-      width: 90%;
+      width: 20rem;
     }
-    tr:nth-of-type(2) > td:last-of-type > * {
-      width: 100%;
+    textarea {
+      font-family: Arial, Helvetica, sans-serif;
     }
     tr:nth-of-type(3) > td:last-of-type > * {
-      width: 50%;
+      width: 12rem;
     }
     tr:nth-of-type(4) > * {
       padding-block: 1rem;
@@ -51,89 +47,113 @@
       padding-inline-end: 4rem;
     }
     tr:nth-last-of-type(3) > td:last-of-type > * {
-      width: 40%;
+      /* width: 40%; */
     }
-    select, input, textarea {
-      background-color: rgba(0, 0, 255, 0.2);
-      border: 1px dotted blue;
-      border-radius: 0.75rem;
-      padding: 0.25rem 0.5rem;
+    tr:nth-of-type(7) > td:first-of-type {
+      padding-inline: 8rem;
+      /* padding: 0; */
+    }
+    tr:nth-of-type(7) > td:first-of-type > fieldset {
+      display: inline-block;
+      padding-inline-end: 4rem;
+    }
+    tr:nth-of-type(7) > td:first-of-type > fieldset > input {
+      width: 6rem;
     }
     tr:last-of-type > td:first-of-type, tr:nth-last-of-type(2) > td:first-of-type {
       text-align: center;
-      padding: 0;
+      padding-block: 0.5rem;
     }
-    tr:last-of-type > td:first-of-type::after, tr:nth-last-of-type(2) > td:first-of-type::after {
-      content: "";
-    }
-    tr:nth-of-type(4) > td:last-of-type > *, select, button {
+    input[type='checkbox'], input[type='checkbox'] + label, input[type='radio'], input[type='radio'] + label, select, button {
       cursor: pointer;
     }
-    button {
-      color: white;
-      background-image: linear-gradient(blue, deepskyblue);
-      padding: 0.125rem 1.5rem;
-      border-color: white;
-      border-radius: 0.5rem;
-      margin-block: 1rem;
+    input[type='checkbox'] {
+      accent-color: #eee;
+    }
+    input[type='radio'] {
+      accent-color: #666;
     }
     button:focus-visible {
       outline-color: rgba(0, 0, 255, 0.2);
       outline-style: outset;
     }
     tr:last-of-type > td:first-of-type {
-      color: magenta;
-      font-style: italic;
+      color: crimson;
+      font-weight: bold;  
     }
   </style>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <table>
-    <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
-    <form action="#" method="post">
+  <form action="#" method="post">
+    <table>
+      <caption><h1>Đăng ký du lịch</h1></caption>
       <tr>
-        <td><label for="form_username">Họ tên</label></td>
-        <td><input type="text" name="username" id="form_username" autocomplete="on" required></td>
+        <td><label for="username">Họ tên</label></td>
+        <td><input type="text" id="username" name="username" autocomplete="on" required></td>
       </tr>
       <tr>
-        <td><label for="form_address">Địa chỉ</label></td>
-        <td><textarea name="address" id="form_address" cols="40" rows="4" autocomplete="on" required></textarea></td>
+        <td><label for="address">Địa chỉ</label></td>
+        <td><textarea id="address" name="address" cols="55" rows="5" autocomplete="on" required></textarea></td>
       </tr>
       <tr>
-        <td><label for="form_phone">Điện thoại</label></td>
-        <td><input type="tel" name="phone" id="form_phone" pattern="^(\d{10}|\d{11})$" title="Số điện thoại phải bao gồm 10 hoặc 11 chữ số" autocomplete="on" required></td>
+        <td><label for="phone">Điện thoại</label></td>
+        <td><input type="tel" id="phone" name="phone" pattern="^(\d{10}|\d{11})$" title="Số điện thoại phải bao gồm 10 hoặc 11 chữ số" autocomplete="on" required></td>
       </tr>
       <tr>
-        <td>Giới tính</td>
+        <td>Khách Việt Nam</td>
         <td>
-          <input type="radio" name="gender" id="form_gender_nam" value="nam" required>
-          <label for="form_gender_nam">Nam</label>
-          <input type="radio" name="gender" id="form_gender_nu" value="nu" required checked>
-          <label for="form_gender_nu">Nữ</label>
+          <input type="checkbox" id="is_Vietnamese_tourist" name="is_Vietnamese_tourist" checked>
         </td>
       </tr>
       <tr>
-        <td><label for="form_career">Nghề nghiệp</label></td>
-        <td><select name="career" id="form_career">
-          <option value="doctor">Bác sĩ</option>
-          <option value="engineer">Kỹ sư</option>
-          <option value="teacher" selected>Giáo viên</option>
-          <option value="others">Khác</option>
+        <td><label for="tours">Chọn tour</label></td>
+        <td><select id="tours" name="tours" required>
+          <optgroup label="Miền Bắc">
+            <option value="HN_HL_SP">Hà Nội - Hạ Long - Sapa</option>
+            <option value="HN_CH_NB">Hà Nội - Chùa Hương - Ninh Bình</option>
+            <option value="HN_CB_TC">Hà Nội - Cát Bà - Tuần Châu</option>
+          </optgroup>
+          <optgroup label="Miền Trung">
+            <option value="H_BM_DN">Huế - Bạch Mã - Đà Nẵng</option>
+            <option value="NT_DL">Nha Trang - Đà Lạt</option>
+            <option value="BMT_GL_KT">Buôn Mê Thuột - Gia Lai - Kontum</option>
+          </optgroup>
+          <optgroup label="Miền Nam">
+            <option value="TPHCM_CT_CM">TpHCM - Cần Thơ - Cà Mau</option>
+            <option value="PQ_CD" selected>Phú Quốc - Côn Đảo</option>
+          </optgroup>
         </select></td>
       </tr>
       <tr>
-        <td><label for="form_product">Chọn sản phẩm tham gia</label></td>
-        <td><select name="product" id="form_product" size="4" multiple>
-          <option value="toothpaste">Kem đánh răng</option>
-          <option value="washing_powder" selected>Bột giặt</option>
-          <option value="shampoo">Dầu gội đầu</option>
-          <option value="shower_gel" selected>Sữa tắm</option>
-        </select></td>
+        <td>Phương tiện</td>
+        <td>
+          <input type="radio" name="transportation" id="form_transportation_plane" value="plane" required checked>
+          <label for="form_transportation_plane">Máy bay</label>
+          <input type="radio" name="transportation" id="form_transportation_bus" value="bus" required>
+          <label for="form_transportation_bus">Xe du lịch</label>
+        </td>
       </tr>
       <tr>
-        <td><label for="form_participants_guess_number">Số người dự đoán tham gia</label></td>
-        <td><input type="number" id="form_participants_guess_number" placeholder="30000"></td>
+        <td colspan="2">
+          <fieldset>
+            <legend>Số lượng đoàn khách</legend>
+            <label for="adults_count">Người lớn</label>
+            <input type="number" id="adults_count" name="adults_count" min="1" step="1" value="7" required>
+            <label for="children_count">Trẻ em</label>
+            <input type="number" id="children_count" name="children_count" min="0" step="1" value="2" required>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="additional_notes">Ghi chú thêm</label></td>
+        <td>
+          <textarea id="additional_notes" name="additional_notes" cols="55" rows="5" autocomplete="on">
+Có 2 người lớn trên 70 tuổi
+Có 2 người lớn ăn chay
+2 trẻ em: 10 tuổi, 1 tuổi
+          </textarea>
+        </td>
       </tr>
       <tr>
         <td colspan="2"><button type="submit">Đồng ý</button></td>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCAALCoffee</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    img {
+      display: block;
+    }
+    p {
+      margin: 0;
+    }
+    .container {
+      max-width: 50rem;
+      padding-inline-start: 0.5rem;
+      border-inline-end: 4px solid white;
+      border-inline-start: 1px solid black;
+      border-bottom: 1px solid white;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 2fr 9fr;
+    }
+    .navigation-container, .contents-container {
+      min-height: 80vh;
+    }
+    .navigation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 3rem;
+      padding-top: 5rem;
+      background: url(./images/logo_globe_a.gif) right bottom / auto no-repeat;
+    }
+    .contents-container {
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 1rem 0 1rem;
+      background: darkgoldenrod url(./images/logo_globe_b.gif) left bottom / auto no-repeat;
+    }
+    .main-text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .main-img-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .text-xl {
+      font-size: 2rem;
+    }
+    .text-emphasized {
+      color: darkcyan;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    * {
+      /* border: 1px solid black; */
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <img src="./images/logo_scaal.gif" alt="logo_scaal">
+    <div  class="grid-container">
+      <div class="navigation-container" >
+        <img src="./images/btn_ourstory_up.gif" alt="btn_ourstory_up">
+        <img src="./images/btn_products_up.gif" alt="btn_products_up">
+        <img src="./images/btn_thisweek_up.gif" alt="btn_thisweek_up">
+      </div>
+      <div class="contents-container">
+        <div class="main-text-container">
+          <p><span class="text-xl">Welcome</span> to the Scaal Coffee Web site, home of the finest coffee gifts in the world.</p>
+          <p>Take a moment to view our many <span class="text-emphasized">products</span>. We offer fine roasted products as well as items to wear and items for the office.</p>
+          <p>Scaal has been serving fine coffee connoisseurs like you for over 50 years. We follow a roasting process that produces the finest coffees in the world.</p>
+          <p>Check with us often to see our <span class="text-emphasized">special promotions</span> of the week.</p>
+        </div>
+        <div class="main-img-container">
+          <img src="./images/coffee-cup.jpg" alt="coffee-cup">
+          <img src="./images/coffee-online.gif" alt="coffee-online">
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

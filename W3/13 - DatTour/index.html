@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đăng ký du lịch</title>
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./index.js"></script>
 </head>
-<body>
+<body onload="username.focus();">
 
   <!-- Form -->
-  <form action="#" method="post">
+  <form action="#" method="post" onsubmit="SuccessAlert();">
     <table>
 
       <!-- Header -->
@@ -66,10 +67,10 @@
       <tr>
         <td>Phương tiện</td>
         <td>
-          <input type="radio" name="transportation" id="form_transportation_plane" value="plane" required checked>
-          <label for="form_transportation_plane">Máy bay</label>
-          <input type="radio" name="transportation" id="form_transportation_bus" value="bus" required>
-          <label for="form_transportation_bus">Xe du lịch</label>
+          <input type="radio" id="transportation_plane" name="transportation" value="plane" required checked>
+          <label for="transportation_plane">Máy bay</label>
+          <input type="radio" id="transportation_bus" name="transportation" value="bus" required>
+          <label for="transportation_bus">Xe du lịch</label>
         </td>
       </tr>
 

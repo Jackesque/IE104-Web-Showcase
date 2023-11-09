@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div class="body">
+    <audio controls loop autoplay id="page_audio" style="position: absolute; top: -10rem;">
+      <source src="./audio/RomanceDeAmour-FrancisGoya.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      const pageAudio = document.getElementById("page_audio");
+      pageAudio.volume = 0.1;
+      pageAudio.play();
+    </script>
+  </div>
+</body>
+</html>

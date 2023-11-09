@@ -1,0 +1,7 @@
+.contents-container {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+.navigation-img {
+  height: 100%;
+}

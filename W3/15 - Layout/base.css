@@ -18,13 +18,10 @@ header {
   padding: 2rem;
   text-align: center;
 }
-.contents-container {
-  display: flex;
-  height: calc(100vh - 100px);
-}
 .navigation-img {
   height: 100%;
 }
 iframe {
   width: 100%;
+  height: 100%;
 }

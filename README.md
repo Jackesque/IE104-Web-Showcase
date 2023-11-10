@@ -1,4 +1,4 @@
-# IE104-Web-Showcase
+# IE104 Web Showcase
 
 A collection of practice exercises for my web subject.
 

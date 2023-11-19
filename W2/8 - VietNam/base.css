@@ -7,7 +7,15 @@ h1 {
   margin-block: 0.5rem;
   color: white; 
 }
-
+img {
+  max-width: 100%;
+}
 footer img {
   cursor: pointer;
+}
+
+.page-footer-1 {
+  display: flex; 
+  justify-content: space-between; 
+  user-select: none; 
 }

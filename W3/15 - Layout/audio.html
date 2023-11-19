@@ -2,15 +2,11 @@
 <html lang="en">
 <body>
   <div class="body">
-    <audio controls loop autoplay id="page_audio" style="position: absolute; top: -10rem;">
+    <audio muted loop autoplay id="page_audio">
       <source src="./audio/RomanceDeAmour-FrancisGoya.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <script>
-      const pageAudio = document.getElementById("page_audio");
-      pageAudio.volume = 0.1;
-      pageAudio.play();
-    </script>
+    <script defer src="./audio.js"></script>
   </div>
 </body>
 </html>

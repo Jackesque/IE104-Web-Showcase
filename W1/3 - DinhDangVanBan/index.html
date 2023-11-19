@@ -8,6 +8,7 @@
     body {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     .bold {
@@ -22,13 +23,27 @@
     .red {
       color: red;
     }
+
+    .container {
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      padding: 2.5rem; 
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+      body {
+        display: inline-flex;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="display: flex; flex-flow: column nowrap; justify-content: center; padding: 40px;">
+  <div class="container">
     <h1 style="color: limegreen; text-align: center;">Định dạng văn bản</h1>
 
-      <div style="display: flex; flex-flow: column nowrap;">
+      <div style="display: flex; flex-direction: column;">
       <p>
         <span class="bold underline">Hóa học:</span>
         <span class="italic">Nước:</span>

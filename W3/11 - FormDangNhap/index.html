@@ -5,29 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form đăng nhập</title>
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./index.js"></script>
 </head>
 <body>
-  <form action="#" method="post" onsubmit="printChaoBan();" class="flex flex-col gap-2">
+  <form action="#" method="post" onsubmit="handleSubmit(event);" class="flex flex-col gap-2">
     <h1>Form đăng nhập</h1>
 
     <!-- Username line -->
-    <div class="flex gap-2">
+    <div class="flex gap-2 input-line">
       <label for="username" class="flex">Tên người dùng</label>
       <input type="text" autocomplete="username">
     </div>
 
     <!-- Password line -->
-    <div class="flex gap-2">
+    <div class="flex gap-2 input-line">
       <label for="password" class="flex">Mật khẩu</label>
       <input type="password" autocomplete="current-password">
     </div>
     <button type="submit" class="self-center" style="cursor: pointer;">Đăng nhập</button>
   </form>
 </body>
-<script>
-  const printChaoBan = () => {
-    console.log('Chào bạn');
-    document.write('Chào bạn');
-  }
-</script>
 </html>

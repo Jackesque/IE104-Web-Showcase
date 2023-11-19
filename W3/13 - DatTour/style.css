@@ -1,5 +1,5 @@
 body {
-  padding: 0;
+  padding: 0 1rem;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -12,8 +12,8 @@ table {
   background-color: beige;
 }
 td {
-  padding: 0.5rem;
   border: 2px solid blue;
+  padding: 0.5rem;
 }
 caption {
   text-transform: uppercase;
@@ -24,17 +24,23 @@ tr > td:first-of-type {
 
 /* Row 1 */
 tr:first-of-type > td:last-of-type > * {
-  width: 20rem;
+  width: 80%;
 }
 
 /* Row 2 */
+tr:nth-of-type(2) > td:last-of-type, tr:nth-of-type(8) > td:last-of-type {
+  padding-inline-end: 3rem;
+}
 textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 4rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Row 3 */
 tr:nth-of-type(3) > td:last-of-type > * {
-  width: 12rem;
+  width: 60%;
 }
 input[type='checkbox'], input[type='checkbox'] + label, input[type='radio'], input[type='radio'] + label, select, button {
   cursor: pointer;
@@ -60,7 +66,10 @@ tr:nth-of-type(7) > td:first-of-type {
 tr:nth-of-type(7) > td:first-of-type > fieldset {
   padding-inline-end: 4rem;
 }
-tr:nth-of-type(7) > td:first-of-type > fieldset > input {
+tr:nth-of-type(7) > td:first-of-type > fieldset > div {
+  display: inline-block;
+}
+tr:nth-of-type(7) > td:first-of-type > fieldset input {
   width: 6rem;
 }
 
@@ -68,10 +77,59 @@ tr:nth-of-type(7) > td:first-of-type > fieldset > input {
 tr:last-of-type > td:first-of-type, tr:nth-last-of-type(2) > td:first-of-type {
   text-align: center;
   padding: 0.5rem 0;
+  text-decoration: none;
 }
 
 /* Last row */
 tr:last-of-type > td:first-of-type {
   color: crimson;
   font-weight: bold;  
+}
+
+@media screen and (max-width: 768px) {
+  tr:nth-of-type(7) > td:first-of-type {
+    padding-inline: 4rem;
+  }
+  tr > td:first-of-type {
+    padding-inline-end: 0.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  form, table {
+    width: 100%;
+  }
+  tr {
+    border: 2px solid blue;
+  }
+  td {
+    padding: 0.5rem;
+    border: none;
+    display: block;
+  }
+  tr > td:first-of-type {
+    text-decoration: underline;
+  }
+  tr:nth-of-type(2) > td:last-of-type, tr:nth-of-type(8) > td:last-of-type {
+    padding-inline-end: 0.5rem;
+  }
+  tr:nth-of-type(6) > td {
+    padding-block: 0.5rem;
+  }
+  tr:nth-of-type(7) > td:first-of-type {
+    padding-inline: 1rem;
+    text-decoration: none;
+  }
+  tr:nth-of-type(7) > td:first-of-type > fieldset > legend {
+    text-decoration: underline;
+  }
+  tr:nth-of-type(7) > td:first-of-type {
+    padding-inline: 4rem;
+  }
+  tr:nth-of-type(7) > td:first-of-type > fieldset {
+    text-align: center;
+    padding-inline-end: 0.5rem;
+  }
+  tr:nth-of-type(7) > td:first-of-type > fieldset label {
+    display: block;
+  }
 }

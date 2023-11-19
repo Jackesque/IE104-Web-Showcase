@@ -28,3 +28,9 @@ footer > button:hover {
 footer > button:active {
   background-color: rgba(238, 130, 238, 0.6);
 }
+
+@media screen and (max-width: 1024px) {
+  .page-footer-1 {
+    display: none;
+  }
+}

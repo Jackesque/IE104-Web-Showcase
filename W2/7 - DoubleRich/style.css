@@ -18,6 +18,15 @@ ul, ol {
   padding-inline-start: 1.25rem;
   color: #feccff;
 }
+ul {
+  padding: 0; 
+  list-style-image: url(./images/square-list.svg); 
+}
+img {
+  overflow: auto; 
+  padding: 1rem 0.5rem; 
+  max-width: 30%;
+}
 
 .text-red {
   color: red;
@@ -42,4 +51,63 @@ ul, ol {
 }
 .pis-6 {
   padding-inline-start: 2.5rem;
+}
+
+.table-container {
+  max-width: 60%;
+  align-self: center;
+  border: 1px solid #feccff;
+  margin-block-start: 2rem;
+}
+.title-container {
+  background-color: #feccff;
+}
+.first-title-text {
+  color: white; 
+  font-size: 1.75rem; 
+  background-color: red; 
+  padding-inline-end: 0.25rem; 
+  justify-content: flex-end; 
+  align-items: center; 
+}
+.second-title-text {
+  color: red; 
+  font-size: 2.25rem; 
+  padding-inline: 0.5rem; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: darkred url(./images/nen-hoa-hong.png) right bottom / auto fixed no-repeat;
+  }
+  .table-container {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .table-container {
+    max-width: 100%;
+  }
+  .second-title-text {
+    font-size: 2rem; 
+  }
+}
+@media screen and (max-width: 600px) {
+  .title-container {
+    flex-direction: column;
+  }
+  .first-title-text, .second-title-text {
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+  img {
+    max-width: 60%;
+    align-self: center;
+  }
+  .contents-container {
+    flex-direction: column;
+  }
 }

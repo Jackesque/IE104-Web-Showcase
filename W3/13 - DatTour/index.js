@@ -1,4 +1,4 @@
-const SuccessAlert = () => {
+const alertSuccess = () => {
 
   // Row 1
   const usernameValue = username.value.trim();
@@ -41,5 +41,9 @@ const SuccessAlert = () => {
     adultsCountValue + " người lớn, " +
     childrenCountValue + " trẻ em\n" +
     "Ghi chú thêm: \n" + sanitizedAdditionalNotes + "\n" 
-    );
-  }
+  );
+}
+const handleSubmit = (e) => {
+  e.preventDefault();
+  alertSuccess();
+}

@@ -18,13 +18,13 @@
       padding: 0;
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: url(./images/binh-hoa.jpg) left center / auto fixed no-repeat, url(./images/nen-hoa-hong.jpg) right bottom / contain fixed no-repeat;
+      background: url(./images/nen-hoa-hong.jpg) right bottom / contain fixed no-repeat;
     }
-
+    
     .bold {
       font-weight: bold;
     }
-
+    
     ol > li > span {
       background: #ff009a;
       color: white;
@@ -32,13 +32,33 @@
     ol > ul:nth-of-type(2) > li::marker {
       color: #ff009a;
     }
+    hr {
+      min-width: 30rem; 
+      margin-inline-start: -1.25rem; 
+    }
+    
+    @media screen and (min-width: 1441px) {
+      body {
+        background: url(./images/binh-hoa.jpg) left center / auto fixed no-repeat, url(./images/nen-hoa-hong.jpg) right bottom / contain fixed no-repeat;
+      }
+    }
+    @media screen and (min-width: 1080px) and (max-width: 1440px) {
+      body {
+        background: url(./images/binh-hoa.jpg) left center / 25% fixed no-repeat, url(./images/nen-hoa-hong.jpg) right bottom / contain fixed no-repeat;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      hr {
+        min-width: auto;
+      }
+    }
   </style>
 </head>
 <body>
   <div>
     <h1 style="text-align: center; padding: 0.5rem 0; margin: 0; font-family: 'UTM Wedding K_T'; font-size: 3rem; color: white; text-shadow: 0 2px #ff009a, 0 0 10px #ff009a;">Shop Hoa tươi Hạnh Phúc</h1>
-    <div style="display: flex; flex-flow: column nowrap; align-items: center;">
-      <div>
+    <div style="display: flex; justify-content: center;">
+      <div style="padding: 0 2.5rem;">
         <ol>
           <li><span class="bold">Giới thiệu</span></li>
           <ul style="list-style-image: url(images/bullet-hoa-tim.png);">
@@ -47,7 +67,7 @@
             <li>Có trên 20 cửa hàng bán lẻ tại TP.HCM </li>
             <li>Nhận kết giỏ hoa theo yêu cầu của khách hàng </li>
           </ul>
-          <hr style="min-width: 30rem; margin-inline-start: -1.25rem;"/>
+          <hr />
           <li><span class="bold">Liên hệ</span></li>
           <ul style="list-style-type: disc;">
             <li>Địa chỉ: <span class="bold">245 Nguyễn Văn Cừ Q5, TP.HCM</span></li>

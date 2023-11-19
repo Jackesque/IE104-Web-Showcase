@@ -4,13 +4,13 @@ html {
 body {
   min-height: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #006790;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
-  border-inline: 10rem solid #006790;
+  border-inline: 10vw solid #006790;
   margin: 0;
   gap: 2rem;
 }
@@ -73,4 +73,13 @@ footer {
 }
 .hover\:underline:hover {
   text-decoration: underline;
+}
+.max-w-full {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding-inline: 1rem;
+  }
 }

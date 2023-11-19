@@ -47,3 +47,17 @@ tr > td:nth-child(2) {
   text-align: start;
   padding-inline: 0.25rem;
 }
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: url(./images/truong_day_thiet_ke_do_hoa.jpg) 5rem bottom / auto fixed no-repeat, url(./images/nguyen-tac-trong-thiet-ke-do-hoa.jpg) -3.25rem top fixed repeat-x;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: url(./images/truong_day_thiet_ke_do_hoa.jpg) center bottom / contain fixed no-repeat, url(./images/nguyen-tac-trong-thiet-ke-do-hoa.jpg) -3.25rem top fixed repeat-x;
+  }
+  caption {
+    margin: 0;
+  }
+}
